@@ -138,7 +138,22 @@
             margin: 0 5px;
         }
 
+        @media (max-width: 1000px) {
+            .team-cards{
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+                padding: 0 20px
+            }
+        }
+
+
+
         @media (max-width: 480px) {
+            .team-cards{
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                padding: 0 20px
+            }
             .team-card {
                 width: 100%;
                 max-width: 300px;
@@ -152,6 +167,14 @@
             
             .separator {
                 display: none;
+            }
+        }
+
+        @media (max-width: 380px) {
+            .team-cards{
+                display: grid;
+                grid-template-columns: 1fr;
+                padding: 0 20px
             }
         }
     </style>

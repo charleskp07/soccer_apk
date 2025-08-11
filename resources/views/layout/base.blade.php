@@ -5,85 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    {{-- <link rel="stylesheet" href="{{URL::asset('css\style.css')}}"> --}}
-</head>
-<body>
-    <header class="main-header">
-        <nav class="navbar">
-            <div class="navbar-container">
-                <!-- Logo -->
-                <div class="logo">
-                    <a href="{{route('home')}}">
-                        <img src="{{URL::asset('images/03fed74e302f3ba5ed2ce41cdd7eb1e2182dda65.png')}}" alt="Logo du site" class="logo-img">
-                    </a>
-                </div>
-
-                <!-- Menu Hamburger (mobile) -->
-                <button class="hamburger" id="hamburger">
-                    <span class="hamburger-line"></span>
-                    <span class="hamburger-line"></span>
-                    <span class="hamburger-line"></span>
-                </button>
-
-                <!-- Navigation -->
-                <ul class="nav-menu" id="nav-menu">
-                    @if (Auth::check())
-                        <li class="nav-item">
-                            <a href="{{route('home')}}" class="nav-link">
-                                <i class="fas fa-calendar-alt"></i> Liste des matchs
-                            </a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a href="{{route('teams.index')}}" class="nav-link">
-                                <i class="fas fa-users"></i> Équipes
-                            </a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a href="{{route('profil.index')}}" class="nav-link">
-                                <i class="fas fa-user-circle"></i> Mon profil
-                            </a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a href="{{route('logout')}}" class="nav-link">
-                                <i class="fas fa-user-circle"></i> Déconnexion 
-                            </a>
-                        </li>
-
-                        {{-- <li class="nav-item">
-                            <form action="{{ route('logout') }}" method="POST" class="logout-form">
-                                @csrf
-                                <button type="submit" class="logout-btn">
-                                    <i class="fas fa-sign-out-alt"></i>
-                                </button>
-                            </form>
-                        </li> --}}
-                    @else
-                        <li class="nav-item">
-                            <a href="{{route('home')}}" class="nav-link">
-                                <i class="fas fa-calendar-alt"></i> Liste des matchs
-                            </a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a href="{{route('teams.index')}}" class="nav-link">
-                                <i class="fas fa-users"></i> Équipes
-                            </a>
-                        </li>
-
-                        <li class="">
-                            <a href="{{route('auth.login')}}" class="">
-                                Se connecter
-                            </a>
-                        </li>
-                    @endif
-                </ul>
-            </div>
-        </nav>
-    </header>
-
+    <link rel="stylesheet" href="{{URL::asset('css\style.css')}}">
     <style>
         /* Variables */
         :root {
@@ -302,6 +224,85 @@
             }
         }
     </style>
+</head>
+<body>
+    <header class="main-header">
+        <nav class="navbar">
+            <div class="navbar-container">
+                <!-- Logo -->
+                <div class="logo">
+                    <a href="{{route('home')}}">
+                        <img src="{{URL::asset('images/03fed74e302f3ba5ed2ce41cdd7eb1e2182dda65.png')}}" alt="Logo du site" class="logo-img">
+                    </a>
+                </div>
+
+                <!-- Menu Hamburger (mobile) -->
+                <button class="hamburger" id="hamburger">
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                </button>
+
+                <!-- Navigation -->
+                <ul class="nav-menu" id="nav-menu">
+                    @if (Auth::check())
+                        <li class="nav-item">
+                            <a href="{{route('home')}}" class="nav-link">
+                                <i class="fas fa-calendar-alt"></i> Liste des matchs
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a href="{{route('teams.index')}}" class="nav-link">
+                                <i class="fas fa-users"></i> Équipes
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a href="{{route('profil.index')}}" class="nav-link">
+                                <i class="fas fa-user-circle"></i> Mon profil
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a href="{{route('logout')}}" class="nav-link">
+                                <i class="fas fa-user-circle"></i> Déconnexion 
+                            </a>
+                        </li>
+
+                        {{-- <li class="nav-item">
+                            <form action="{{ route('logout') }}" method="POST" class="logout-form">
+                                @csrf
+                                <button type="submit" class="logout-btn">
+                                    <i class="fas fa-sign-out-alt"></i>
+                                </button>
+                            </form>
+                        </li> --}}
+                    @else
+                        <li class="nav-item">
+                            <a href="{{route('home')}}" class="nav-link">
+                                <i class="fas fa-calendar-alt"></i> Liste des matchs
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a href="{{route('teams.index')}}" class="nav-link">
+                                <i class="fas fa-users"></i> Équipes
+                            </a>
+                        </li>
+
+                        <li class="">
+                            <a href="{{route('auth.login')}}" class="">
+                                Se connecter
+                            </a>
+                        </li>
+                    @endif
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+
 
 
 

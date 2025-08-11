@@ -27,7 +27,7 @@ class PlayerUpdateRequest extends FormRequest
             'lastname' =>'min:2|max:255',
             'firstname' =>'min:2|max:255',
             'age' =>'min:1|max:2',
-            'weight' =>'max:4',
+            'weight' =>'max:5',
             'size' =>'max:3',
             'country_of_origin' =>'min:2|max:255',
             
@@ -45,7 +45,7 @@ class PlayerUpdateRequest extends FormRequest
             'firstname.max' => "Au plus 128 caractères pour le prénom.", 
             'age.min' => "minimum 1 chiffres pour l'âge.",
             'age.max' => "maximum 2 chiffres pour l'âge.",
-            'weight.max' => "maximum 4 chiffres pour le poids.",
+            'weight.max' => "maximum 5 chiffres pour le poids.",
             'size.max' => "maximum 3 chiffres pour la taille.",       
         ];
     }
